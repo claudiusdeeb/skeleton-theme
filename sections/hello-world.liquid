@@ -30,11 +30,14 @@
       <li>
         <div class="card">
           <div class="media">
-            {{- collection.title | link_to: collection.url }}
-            {{ 'collection-1' | placeholder_svg_tag }}
+            {% if collection.image != blank %}
+              {{ collection.image }}
+            {% else %}
+              {{ 'collection-1' | placeholder_svg_tag }}
+            {% endif %}
           </div>
           <h3>
-            <a href="#">Collection title</a>
+            {{- collection.title | link_to: collection.url }}
           </h3>
         </div>
       </li>
