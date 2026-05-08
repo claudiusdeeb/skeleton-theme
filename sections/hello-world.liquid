@@ -25,7 +25,7 @@
 
 <div>
   {% for collection in collections %}
-    {{- collection.title | link_to: collection.url }}
+    {{- collection.title | link_to: collection.url, class: 'highlights' }}
   {% endfor %}
 </div>
 
