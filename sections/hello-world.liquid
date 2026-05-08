@@ -31,7 +31,7 @@
         <div class="card">
           <div class="media">
             {% if collection.image != blank %}
-              {{ collection.image }}
+              {{ collection.image | image_url: width: 200 | image_tag }}
             {% else %}
               {{ 'collection-1' | placeholder_svg_tag }}
             {% endif %}
