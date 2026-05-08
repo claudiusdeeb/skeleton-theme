@@ -26,16 +26,19 @@
 <div class="collections-grid">
   <h2>Our Collections</h2>
   <ul>
-    <li>
-      <div class="card">
-        <div class="media">
-          {{ 'collection-1' | placeholder_svg_tag }}
+    {% for collection in collections %}
+      <li>
+        <div class="card">
+          <div class="media">
+            {{- collection.title | link_to: collection.url }}
+            {{ 'collection-1' | placeholder_svg_tag }}
+          </div>
+          <h3>
+            <a href="#">Collection title</a>
+          </h3>
         </div>
-        <h3>
-          <a href="#">Collection title</a>
-        </h3>
-      </div>
-    </li>
+      </li>
+    {% endfor %}
   </ul>
 </div>
 
