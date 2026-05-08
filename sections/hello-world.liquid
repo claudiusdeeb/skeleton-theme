@@ -23,11 +23,22 @@
   </div>
 </div>
 
-<div>
-  {% for collection in collections %}
-    {{- collection.title | link_to: collection.url, class: 'highlights' }}
-  {% endfor %}
+<div class="collections-grid">
+  <h2>Our Collections</h2>
+  <ul>
+    <li>
+      <div class="card">
+        <div class="media">
+          {{ 'collection-1' | placeholder_svg_tag }}
+        </div>
+        <h3>
+          <a href="#">Collection title</a>
+        </h3>
+      </div>
+    </li>
+  </ul>
 </div>
+
 
 <div class="highlights">
   <div class="highlight">
