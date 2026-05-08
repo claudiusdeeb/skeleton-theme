@@ -23,6 +23,12 @@
   </div>
 </div>
 
+<div>
+  {% for collection in collections %}
+    {{- collection.title | link_to: collection.url }}
+  {% endfor %}
+</div>
+
 <div class="highlights">
   <div class="highlight">
     <h3>Key Concepts</h3>
